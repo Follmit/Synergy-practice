@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация об организации — Практическая работа</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&family=PT+Sans:wght@400;700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-font: 'Roboto', sans-serif;
+            --brand-color: #e31e24;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: var(--brand-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: var(--brand-color);
+            font-size: 28px;
+            font-weight: 700;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .info-section {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .info-section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Панель переключения шрифтов */
+        .font-selector-panel {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .font-selector-panel label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ced4da;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="content">
+    <div class="font-selector-panel">
+        <label for="fontSelect">Выберите шрифт:</label>
+        <select id="fontSelect" onchange="changeFont(this.value)">
+            <option value="'Roboto', sans-serif">1. Roboto</option>
+            <option value="'Montserrat', sans-serif">2. Montserrat</option>
+            <option value="'Inter', sans-serif">3. Inter</option>
+            <option value="'Open Sans', sans-serif">4. Open Sans</option>
+            <option value="'PT Sans', sans-serif">5. PT Sans</option>
+            <option value="'Ubuntu', sans-serif">6. Ubuntu</option>
+        </select>
+    </div>
+
+    <h1>ООО «ГЛОБИТ»</h1>
+    
+    <div class="info-section">
+        <h2>О компании</h2>
+        <p>Глобус(Globus) — германская сеть продуктовых гипермаркетов, магазины которой представлены в Германии, Чехии и России. Глобит - это айти подразделение Глобус.</p>
+    </div>
+<div class="info-section">
+        <h2>Дополнительная информация</h2>
+        
+        <p>В настоящее время гипермаркеты сети «Глобус» представлены в Германии, Чехии и России. Компания является семейным предприятием, основанным в 1828 году. Руководит компанией Маттиас Брух, представитель шестого поколения семьи Брух.</p>
+
+        </p>Первый гипермаркет «Глобус» в России был открыт в 2006 году в подмосковном городе Щелково. Сегодня торговая сеть «Глобус» насчитывает 20 гипермаркетов, расположенных в Центральном Федеральном округе. Численность сотрудников «Глобус» превышает 11 000 человек.</p>
+    </div>
+</div>
+
+<script>
+    function changeFont(fontFamily) {
+        document.getElementById('content').style.fontFamily = fontFamily;
+    }
+</script>
+
+</body>
+</html>
